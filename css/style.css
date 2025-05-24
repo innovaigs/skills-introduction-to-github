@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    max-width: 1200px; /* Limits content width */
+    margin: auto; /* Centers content */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Header and Navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff; /* Ensure header h1 is white */
+}
+
+nav {
+    background: #444; /* Slightly different background for nav */
+    padding: 0.5em 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center; /* Center the nav items */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px; /* Spacing between nav items */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background: #fff; /* White background for content area */
+    margin-bottom: 60px; /* Ensure space for the fixed footer */
+}
+
+main section {
+    margin-bottom: 20px; /* Space below each section */
+    padding: 15px; /* Padding within each section */
+    border-bottom: 1px solid #eee; /* Separator for sections */
+}
+
+main section:last-child {
+    border-bottom: none; /* No border for the last section */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em 0; /* Consistent padding */
+    background: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Ensure footer spans the whole width if body isn't full width */
+    right: 0; /* Ensure footer spans the whole width if body isn't full width */
+    font-size: 0.9em;
+    /* max-width inherits from body if not overridden, but for fixed footer, ensure it spans viewport */
+    /* To make footer truly full width regardless of body's max-width, don't set max-width here */
+    /* Or, if it should be constrained like body: */
+    /* max-width: 1200px; */
+    /* margin: auto; */ /* This would only work if not fixed, or with complex setup */
+}
+
+/* If body has max-width, fixed footer needs specific handling to span viewport */
+/* For simplicity, we'll let the fixed footer span the viewport width by not setting max-width on it here */
+/* And ensuring left:0 and right:0 */
