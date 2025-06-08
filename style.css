@@ -1,0 +1,83 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #ffffff; /* Pristine white background */
+}
+
+.container {
+    width: 80%;
+    max-width: 700px; /* Max width for readability */
+    text-align: center;
+    padding: 20px; /* Some padding around the textarea */
+}
+
+#text-input {
+    width: 100%;
+    min-height: 200px; /* Larger text area */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #e0e0e0; /* Very subtle border */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 18px; /* Slightly larger font for readability */
+    line-height: 1.6;
+    resize: none; /* Disable textarea resizing by user */
+    background-color: #ffffff;
+    color: #333333;
+    box-shadow: none; /* No shadow */
+}
+
+#text-input::placeholder {
+    color: #bbbbbb; /* Lighter placeholder text */
+    font-style: italic;
+}
+
+#read-button {
+    background-color: #007aff; /* A clean, modern blue */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px; /* Rounded button for softer look */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for button */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    opacity: 1; /* Will be controlled by JS */
+    transform: translateY(0);
+}
+
+#read-button.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* Slide down effect when hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+/* Styles for the subtle text highlighting (placeholder for now, JS will manage actual highlighting) */
+.highlighted-word {
+    background-color: rgba(0, 122, 255, 0.2); /* Subtle blue highlight */
+    padding: 0.1em 0;
+    border-radius: 3px;
+    transition: background-color 0.2s ease-out;
+}
+
+#text-display {
+    width: 100%;
+    min-height: 200px; /* Same as textarea */
+    margin-bottom: 20px; /* Same as textarea */
+    padding: 15px; /* Same as textarea */
+    border: 1px solid #e0e0e0; /* Same as textarea */
+    border-radius: 8px; /* Same as textarea */
+    box-sizing: border-box;
+    font-size: 18px; /* Same as textarea */
+    line-height: 1.6; /* Same as textarea */
+    background-color: #ffffff;
+    color: #333333;
+    text-align: left; /* Align text to the left */
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    word-wrap: break-word; /* Break long words */
+}
